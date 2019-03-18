@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8AD8634223FD115002907C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8633223FD115002907C6 /* AppDelegate.swift */; };
+		B8AD8637223FD115002907C6 /* DeeperJMD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8635223FD115002907C6 /* DeeperJMD.xcdatamodeld */; };
+		B8AD8639223FD115002907C6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8638223FD115002907C6 /* MasterViewController.swift */; };
+		B8AD863B223FD115002907C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD863A223FD115002907C6 /* DetailViewController.swift */; };
+		B8AD863E223FD116002907C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AD863C223FD116002907C6 /* Main.storyboard */; };
+		B8AD8640223FD116002907C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AD863F223FD116002907C6 /* Assets.xcassets */; };
+		B8AD8643223FD116002907C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AD8641223FD116002907C6 /* LaunchScreen.storyboard */; };
+		B8AD864E223FD117002907C6 /* DeeperJMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD864D223FD117002907C6 /* DeeperJMDTests.swift */; };
+		B8AD8659223FD117002907C6 /* DeeperJMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8AD864A223FD116002907C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8AD8628223FD115002907C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8AD862F223FD115002907C6;
+			remoteInfo = DeeperJMD;
+		};
+		B8AD8655223FD117002907C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8AD8628223FD115002907C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8AD862F223FD115002907C6;
+			remoteInfo = DeeperJMD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B8AD8630223FD115002907C6 /* DeeperJMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeeperJMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8AD8633223FD115002907C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8AD8636223FD115002907C6 /* DeeperJMD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeeperJMD.xcdatamodel; sourceTree = "<group>"; };
+		B8AD8638223FD115002907C6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B8AD863A223FD115002907C6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B8AD863D223FD116002907C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8AD863F223FD116002907C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8AD8642223FD116002907C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8AD8644223FD116002907C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8AD8649223FD116002907C6 /* DeeperJMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeeperJMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8AD864D223FD117002907C6 /* DeeperJMDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeperJMDTests.swift; sourceTree = "<group>"; };
+		B8AD864F223FD117002907C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8AD8654223FD117002907C6 /* DeeperJMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeeperJMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeperJMDUITests.swift; sourceTree = "<group>"; };
+		B8AD865A223FD117002907C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8AD862D223FD115002907C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8646223FD116002907C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8651223FD117002907C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8AD8627223FD115002907C6 = {
+			isa = PBXGroup;
+			children = (
+				B8AD8632223FD115002907C6 /* DeeperJMD */,
+				B8AD864C223FD116002907C6 /* DeeperJMDTests */,
+				B8AD8657223FD117002907C6 /* DeeperJMDUITests */,
+				B8AD8631223FD115002907C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8AD8631223FD115002907C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD8630223FD115002907C6 /* DeeperJMD.app */,
+				B8AD8649223FD116002907C6 /* DeeperJMDTests.xctest */,
+				B8AD8654223FD117002907C6 /* DeeperJMDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8AD8632223FD115002907C6 /* DeeperJMD */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD8633223FD115002907C6 /* AppDelegate.swift */,
+				B8AD8638223FD115002907C6 /* MasterViewController.swift */,
+				B8AD863A223FD115002907C6 /* DetailViewController.swift */,
+				B8AD863C223FD116002907C6 /* Main.storyboard */,
+				B8AD863F223FD116002907C6 /* Assets.xcassets */,
+				B8AD8641223FD116002907C6 /* LaunchScreen.storyboard */,
+				B8AD8644223FD116002907C6 /* Info.plist */,
+				B8AD8635223FD115002907C6 /* DeeperJMD.xcdatamodeld */,
+			);
+			path = DeeperJMD;
+			sourceTree = "<group>";
+		};
+		B8AD864C223FD116002907C6 /* DeeperJMDTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD864D223FD117002907C6 /* DeeperJMDTests.swift */,
+				B8AD864F223FD117002907C6 /* Info.plist */,
+			);
+			path = DeeperJMDTests;
+			sourceTree = "<group>";
+		};
+		B8AD8657223FD117002907C6 /* DeeperJMDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */,
+				B8AD865A223FD117002907C6 /* Info.plist */,
+			);
+			path = DeeperJMDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8AD862F223FD115002907C6 /* DeeperJMD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8AD865D223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMD" */;
+			buildPhases = (
+				B8AD862C223FD115002907C6 /* Sources */,
+				B8AD862D223FD115002907C6 /* Frameworks */,
+				B8AD862E223FD115002907C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeeperJMD;
+			productName = DeeperJMD;
+			productReference = B8AD8630223FD115002907C6 /* DeeperJMD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8AD8648223FD116002907C6 /* DeeperJMDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8AD8660223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMDTests" */;
+			buildPhases = (
+				B8AD8645223FD116002907C6 /* Sources */,
+				B8AD8646223FD116002907C6 /* Frameworks */,
+				B8AD8647223FD116002907C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8AD864B223FD116002907C6 /* PBXTargetDependency */,
+			);
+			name = DeeperJMDTests;
+			productName = DeeperJMDTests;
+			productReference = B8AD8649223FD116002907C6 /* DeeperJMDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8AD8653223FD117002907C6 /* DeeperJMDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8AD8663223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMDUITests" */;
+			buildPhases = (
+				B8AD8650223FD117002907C6 /* Sources */,
+				B8AD8651223FD117002907C6 /* Frameworks */,
+				B8AD8652223FD117002907C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8AD8656223FD117002907C6 /* PBXTargetDependency */,
+			);
+			name = DeeperJMDUITests;
+			productName = DeeperJMDUITests;
+			productReference = B8AD8654223FD117002907C6 /* DeeperJMDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8AD8628223FD115002907C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Joseph Divalentone";
+				TargetAttributes = {
+					B8AD862F223FD115002907C6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B8AD8648223FD116002907C6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B8AD862F223FD115002907C6;
+					};
+					B8AD8653223FD117002907C6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B8AD862F223FD115002907C6;
+					};
+				};
+			};
+			buildConfigurationList = B8AD862B223FD115002907C6 /* Build configuration list for PBXProject "DeeperJMD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8AD8627223FD115002907C6;
+			productRefGroup = B8AD8631223FD115002907C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8AD862F223FD115002907C6 /* DeeperJMD */,
+				B8AD8648223FD116002907C6 /* DeeperJMDTests */,
+				B8AD8653223FD117002907C6 /* DeeperJMDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8AD862E223FD115002907C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AD8643223FD116002907C6 /* LaunchScreen.storyboard in Resources */,
+				B8AD8640223FD116002907C6 /* Assets.xcassets in Resources */,
+				B8AD863E223FD116002907C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8647223FD116002907C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8652223FD117002907C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8AD862C223FD115002907C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AD8637223FD115002907C6 /* DeeperJMD.xcdatamodeld in Sources */,
+				B8AD8634223FD115002907C6 /* AppDelegate.swift in Sources */,
+				B8AD8639223FD115002907C6 /* MasterViewController.swift in Sources */,
+				B8AD863B223FD115002907C6 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8645223FD116002907C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AD864E223FD117002907C6 /* DeeperJMDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8AD8650223FD117002907C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AD8659223FD117002907C6 /* DeeperJMDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8AD864B223FD116002907C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8AD862F223FD115002907C6 /* DeeperJMD */;
+			targetProxy = B8AD864A223FD116002907C6 /* PBXContainerItemProxy */;
+		};
+		B8AD8656223FD117002907C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8AD862F223FD115002907C6 /* DeeperJMD */;
+			targetProxy = B8AD8655223FD117002907C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8AD863C223FD116002907C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8AD863D223FD116002907C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8AD8641223FD116002907C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8AD8642223FD116002907C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8AD865B223FD117002907C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8AD865C223FD117002907C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8AD865E223FD117002907C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8AD865F223FD117002907C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B8AD8661223FD117002907C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeeperJMD.app/DeeperJMD";
+			};
+			name = Debug;
+		};
+		B8AD8662223FD117002907C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeeperJMD.app/DeeperJMD";
+			};
+			name = Release;
+		};
+		B8AD8664223FD117002907C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeeperJMD;
+			};
+			name = Debug;
+		};
+		B8AD8665223FD117002907C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeeperJMDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ACU.edu.DeeperJMDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeeperJMD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8AD862B223FD115002907C6 /* Build configuration list for PBXProject "DeeperJMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AD865B223FD117002907C6 /* Debug */,
+				B8AD865C223FD117002907C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8AD865D223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AD865E223FD117002907C6 /* Debug */,
+				B8AD865F223FD117002907C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8AD8660223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AD8661223FD117002907C6 /* Debug */,
+				B8AD8662223FD117002907C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8AD8663223FD117002907C6 /* Build configuration list for PBXNativeTarget "DeeperJMDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AD8664223FD117002907C6 /* Debug */,
+				B8AD8665223FD117002907C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8AD8635223FD115002907C6 /* DeeperJMD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8AD8636223FD115002907C6 /* DeeperJMD.xcdatamodel */,
+			);
+			currentVersion = B8AD8636223FD115002907C6 /* DeeperJMD.xcdatamodel */;
+			path = DeeperJMD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8AD8628223FD115002907C6 /* Project object */;
+}
