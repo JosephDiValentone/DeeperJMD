@@ -16,6 +16,7 @@
 		B8AD8643223FD116002907C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AD8641223FD116002907C6 /* LaunchScreen.storyboard */; };
 		B8AD864E223FD117002907C6 /* DeeperJMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD864D223FD117002907C6 /* DeeperJMDTests.swift */; };
 		B8AD8659223FD117002907C6 /* DeeperJMDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */; };
+		B8AD8667223FD43C002907C6 /* MovieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD8666223FD43C002907C6 /* MovieDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B8AD8654223FD117002907C6 /* DeeperJMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeeperJMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeperJMDUITests.swift; sourceTree = "<group>"; };
 		B8AD865A223FD117002907C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8AD8666223FD43C002907C6 /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B8AD863C223FD116002907C6 /* Main.storyboard */,
 				B8AD863F223FD116002907C6 /* Assets.xcassets */,
 				B8AD8641223FD116002907C6 /* LaunchScreen.storyboard */,
+				B8AD8666223FD43C002907C6 /* MovieDataModel.swift */,
 				B8AD8644223FD116002907C6 /* Info.plist */,
 				B8AD8635223FD115002907C6 /* DeeperJMD.xcdatamodeld */,
 			);
@@ -264,6 +267,7 @@
 			files = (
 				B8AD8637223FD115002907C6 /* DeeperJMD.xcdatamodeld in Sources */,
 				B8AD8634223FD115002907C6 /* AppDelegate.swift in Sources */,
+				B8AD8667223FD43C002907C6 /* MovieDataModel.swift in Sources */,
 				B8AD8639223FD115002907C6 /* MasterViewController.swift in Sources */,
 				B8AD863B223FD115002907C6 /* DetailViewController.swift in Sources */,
 			);
