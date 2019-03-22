@@ -39,30 +39,5 @@ let jsonURL = "https://api.myjson.com/bins/1e5uji"
         let name: String?
         let playing: String?
     }
-    
-    func getData(completion: @escaping (_ success:Bool) -> ()){
-        var success = true
-        let actualURL = URL(string: jsonURL)
-        
-        let task = URLSession.shared.dataTask(with: actualURL!) {(data, response, error) in
-            
-            if let _ =  data, error == nil {
-                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
-                    
-                    if let movieArray = jsonObj!.value(forKey: "Franchise") as? Array<String>{
-                        self.dataArray = movieArray
-                        
-                        
-                        print(jsonObj!.value(forKey: "Franchise")! )
-                    }
-                }
-            }else {
-                success = false
-            }
-            completion(success)
-        }
-        task.resume()
-    }
-
 
 }
