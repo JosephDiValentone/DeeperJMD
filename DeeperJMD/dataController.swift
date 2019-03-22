@@ -6,32 +6,37 @@
 //  Copyright © 2019 Joseph Divalentone. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
-class dataController: NSObject {
-    func getData(completion: @escaping (_ success:Data) -> ()){
-        var success = Data
-        let actualURL = URL(string: jsonURL)
-        
-        let task = URLSession.shared.dataTask(with: actualURL!) {(data, response, error) in
+class dataController {
+    func getData(completion: @escaping (_ success:MovieDataModel) -> ()){
+        // have the url thatis updating
+        let jsonURL = "https://api.myjson.com/bins/1e5uji"
+        //make the variable for the model to be put into
+        var MDM = MovieDataModel
+        //make the url a string
+        let URLS = URL(string: jsonURL)
+        // make the session
+        let session = URLSession.shared
+        // stil off formatting to me but I guess its what works
+        //start the task of grabbing with the session
+        let task = session.dataTask(with: URLS!) {(data,response, error) in
             
-            if let _ =  data, error == nil {
-                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
-                    
-                    if let movieArray = jsonObj!.value(forKey: "Franchise") as? Array<String>{
-                        self.dataArray = movieArray
-                        
-                        
-                        print(jsonObj!.value(forKey: "Franchise")! )
-                    }
+            if let data = data {
+                // call the decoder and run it through the model
+                let decoder = JSONDecoder()
+                do{
+                    MDM = try decoder.decode(MovieDataModel.self, from: data)
+                }catch{
+                    return
                 }
-            }else {
-                success = false
+                
             }
-            completion(success)
+        
         }
-        task.resume()
+        completion(MDM)
     }
-
+    task.resume()
 }
+

@@ -11,8 +11,6 @@ import UIKit
 
 class MovieDataModel: Codable {
 
-
-let jsonURL = "https://api.myjson.com/bins/1e5uji"
     var franchises: [franchise]
     var dataArray = ["made to break"]
 
