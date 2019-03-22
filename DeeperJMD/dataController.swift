@@ -14,14 +14,19 @@ class dataController {
         // have the url thatis updating
         let jsonURL = "https://api.myjson.com/bins/1e5uji"
         //make the variable for the model to be put into
-        var MDM = MovieDataModel
+        var MDM = MovieDataModel()
         //make the url a string
-        let URLS = URL(string: jsonURL)
+        let url = URL(string: jsonURL)
         // make the session
         let session = URLSession.shared
         // stil off formatting to me but I guess its what works
         //start the task of grabbing with the session
-        let task = session.dataTask(with: URLS!) {(data,response, error) in
+        let task = session.dataTask(with: url!) {(data,response, error) in
+            
+            if error != nil {
+                completion(MDM,error)
+                return
+            }
             
             if let data = data {
                 // call the decoder and run it through the model
@@ -29,14 +34,15 @@ class dataController {
                 do{
                     MDM = try decoder.decode(MovieDataModel.self, from: data)
                 }catch{
+                    completion(MDM,error)
                     return
                 }
                 
             }
-        
+         completion(MDM)
         }
-        completion(MDM)
+        task.resume()
     }
-    task.resume()
+   
 }
 

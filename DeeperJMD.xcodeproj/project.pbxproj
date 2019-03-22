@@ -54,7 +54,7 @@
 		B8AD8654223FD117002907C6 /* DeeperJMDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeeperJMDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AD8658223FD117002907C6 /* DeeperJMDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeperJMDUITests.swift; sourceTree = "<group>"; };
 		B8AD865A223FD117002907C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8AD8666223FD43C002907C6 /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataModel.swift; sourceTree = "<group>"; };
+		B8AD8666223FD43C002907C6 /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MovieDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
