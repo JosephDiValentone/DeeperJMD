@@ -5,8 +5,6 @@
 //  Created by Joseph Divalentone on 3/18/19.
 //  Copyright © 2019 Joseph Divalentone. All rights reserved.
 //
-
-import Foundation
 import UIKit
 
 class MovieDataModel: Codable {
@@ -15,13 +13,13 @@ class MovieDataModel: Codable {
     var dataArray = ["made to break"]
 }
 
-    class Showfranchise : Codable {
+class Showfranchise : Codable {
         var franchiseName = String()
         var  entries: [ShowEntries] = []
         
-    }
+}
 
-    class ShowEntries: Codable{
+class ShowEntries: Codable{
         
         var name:String?
         var format: String?
@@ -33,10 +31,10 @@ class MovieDataModel: Codable {
         var description: String?
         var summary: String?
         var starring: [starring] = []
-    }
-    class starring: Codable{
+}
+class starring: Codable{
         var name: String?
         var playing: String?
-    }
+}
 
 

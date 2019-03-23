@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     // litterally just deleted the whole thing and got functions google said I would need
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

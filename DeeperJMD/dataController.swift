@@ -24,7 +24,7 @@ class dataController {
         let task = session.dataTask(with: url!) {(data,response, error) in
             
             if error != nil {
-                completion(MDM,error)
+                completion(MDM)
                 return
             }
             
@@ -34,7 +34,7 @@ class dataController {
                 do{
                     MDM = try decoder.decode(MovieDataModel.self, from: data)
                 }catch{
-                    completion(MDM,error)
+                    completion(MDM)
                     return
                 }
                 

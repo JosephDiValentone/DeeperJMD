@@ -10,14 +10,20 @@ import UIKit
 import CoreData
 
 class MasterViewController: UITableViewController {
-
+    
+    
+    
+var detailViewController: DetailViewController? = nil
+    
     override func viewDidLoad() {
 //        init(from:MOvieDM)
-//        super.viewDidLoad()
-        
-        
+    super.viewDidLoad()
+
         // go get the data from the datacontroller that gets it and puts it through the model
-        GetIt()
+        if let split = splitViewController {
+            _ = split.viewControllers
+            print("view did load")
+        }
     }
     
     // call the files that I am going to put into the app
@@ -27,15 +33,9 @@ class MasterViewController: UITableViewController {
     
     
     // using those files to grab the json data
-    private func GetIt() {
+     func GetIt() {
         
-        DataCon.getData {(data,error) in
-            
-            if error != nil {
-                print(error?.localizedDescription)
-                print(error)
-            }
-            
+        DataCon.getData {(data) in
             //loading the data
             self.MovieDM = data
             DispatchQueue.main.async{
@@ -44,13 +44,35 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    
   
     
-//
 //    override func viewWillAppear(_ animated: Bool) {
 //        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
 //        super.viewWillAppear(animated)
 //    }
+    override func viewDidAppear(_ animated: Bool){
+        let nav = self.navigationController?.navigationBar
+        
+    
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.yellow
+        
+ 
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        
+
+        let image = UIImage(named: "IRDBlogo")
+        imageView.image = image
+        
+   
+        navigationItem.titleView = imageView
+    }
+    
+    
+    
+    
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,8 +100,6 @@ class MasterViewController: UITableViewController {
         return MovieDM.franchises[section].franchiseName // returns the name of the franchise for the title
         
     }
-    
-    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -87,4 +107,5 @@ class MasterViewController: UITableViewController {
         //grab cells that have populated and populate them with the data
         return cell
     }
+
 }

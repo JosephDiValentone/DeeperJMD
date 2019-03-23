@@ -34,9 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-Uq-KE6">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-Uq-KE6">
                                 <rect key="frame" x="0.0" y="64" width="375" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnV-KO-zLO">
                                         <rect key="frame" x="8" y="13" width="137" height="200"/>
@@ -87,23 +86,38 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.25097766518592834" green="0.25097855925559998" blue="0.25098046660423279" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-qv-ctU">
-                                <rect key="frame" x="16" y="356" width="343" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor i" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-66-0hp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor i" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-66-0hp">
                                 <rect key="frame" x="16" y="299" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-qv-ctU">
+                                <rect key="frame" x="16" y="356" width="343" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="Dcb-rc-MEN"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ARV-66-0hp" firstAttribute="top" secondItem="K4I-Uq-KE6" secondAttribute="bottom" constant="8" symbolic="YES" id="2eG-FM-W47"/>
+                            <constraint firstItem="K4I-Uq-KE6" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="2qe-vI-UM9"/>
+                            <constraint firstAttribute="bottom" secondItem="K4I-Uq-KE6" secondAttribute="bottom" constant="376" id="Ask-9Y-ZnL"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="trailing" secondItem="ARV-66-0hp" secondAttribute="trailing" id="CcU-Ju-0cx"/>
+                            <constraint firstAttribute="bottom" secondItem="BiI-qv-ctU" secondAttribute="bottom" constant="20" symbolic="YES" id="DTT-fe-SBb"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="top" secondItem="ARV-66-0hp" secondAttribute="bottom" constant="8" id="WkX-JA-fzq"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="leading" secondItem="ARV-66-0hp" secondAttribute="leading" id="d6M-lX-0RP"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="top" secondItem="ARV-66-0hp" secondAttribute="bottom" constant="8" symbolic="YES" id="hhb-t1-nmw"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="mpK-fk-Ieh"/>
+                            <constraint firstItem="K4I-Uq-KE6" firstAttribute="centerX" secondItem="ARV-66-0hp" secondAttribute="centerX" id="og5-qn-N5L"/>
+                            <constraint firstItem="K4I-Uq-KE6" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="uJ9-Rn-y0X"/>
+                            <constraint firstItem="BiI-qv-ctU" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="xb2-iX-DLM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
@@ -141,7 +155,7 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="DeeperJMD" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" modalPresentationStyle="currentContext" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="DeeperJMD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +196,11 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="IRDb" id="Zdf-7t-Un8"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="KiW-Lz-qoq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

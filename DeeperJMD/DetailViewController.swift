@@ -11,21 +11,24 @@ import UIKit
 class DetailViewController: UIViewController {
 
 
-
-
-    func configureView() {
-        // Update the user interface for the detail item.
-       
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+  
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool){
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.yellow
+    }
+    
+    
+    
     // set up the main variables for the storyboard
     
-    @IBOutlet weak var moviePicImageView: UImageView!
+    @IBOutlet weak var moviePicImageView: UIImage!
     @IBOutlet weak var TitleL: UILabel!
     @IBOutlet weak var YearL: UILabel!
     @IBOutlet weak var FormatL: UILabel!
@@ -34,7 +37,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var TextFT: UITextView!
     
-    var ShowDet: entries?
+    var ShowDet: ShowEntries?
     
     // now the image getting
     
@@ -48,7 +51,7 @@ class DetailViewController: UIViewController {
                 completion(pic,error)
                 return
             }
-            // if no error then make thepicture what you pull from the file
+            // if no error then make the picture what you pull from the file
             if let fileURL = fileURL{
                 do{
                     let data = try Data(contentsOf: fileURL)
