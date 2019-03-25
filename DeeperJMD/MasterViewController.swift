@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController {
     
     
     
-var detailViewController: DetailViewController? = nil
+    var detailViewController: DetailViewController? = nil
     var MovieDM : MovieDataModel?{
         didSet{tableView.reloadData()}
     }
@@ -70,36 +70,34 @@ var DataCon = dataController()
     
     
     // MARK: - Segues
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let object = MovieDM[Showfranchise.row] as! String
-//                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//            }
-//        }
-//    }
+// so I had to typecast it as a detail view controler
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let maingoto = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                maingoto.ShowDet = MovieDM!.franchise[indexPath.section].entries[indexPath.row]
+            }
+        }
+    }
 
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return ( MovieDM?.franchises.count ) ?? 0 // returns the number of franchises in the json
+        return ( MovieDM?.franchise.count ) ?? 0 // returns the number of franchises in the json
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MovieDM?.franchises[section].entries.count ?? 0 // return the number of franchise sections in the json
+        return MovieDM?.franchise[section].entries.count ?? 0 // return the number of franchise sections in the json
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?  {
-        return MovieDM?.franchises[section].franchiseName // returns the name of the franchise for the title
+        return MovieDM?.franchise[section].franchiseName // returns the name of the franchise for the title
         
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = MovieDM?.franchises[indexPath.section].entries[indexPath.row].name
+        cell.textLabel?.text = MovieDM?.franchise[indexPath.section].entries[indexPath.row].name
+        cell.detailTextLabel?.text = MovieDM?.franchise[indexPath.section].entries[indexPath.row].yearStart
         //grab cells that have populated and populate them with the data
         return cell
     }

@@ -9,8 +9,7 @@ import UIKit
 
 class MovieDataModel: Codable {
 
-    var franchises: [Showfranchise] = []
-    var dataArray = ["made to break"]
+    var franchise: [Showfranchise] = []
 }
 
 class Showfranchise : Codable {
@@ -21,20 +20,20 @@ class Showfranchise : Codable {
 
 class ShowEntries: Codable{
         
-        var name:String?
-        var format: String?
-        var yearStart: String?
+        var name:String
+        var format: String
+        var yearStart: String
         var yearEnd:String?
-        var episodes: String?
+        var episodes: Int?
         var network: String?
         var imageURL: String?
-        var description: String?
-        var summary: String?
+        var description: String
+        var summary: String
         var starring: [starring] = []
 }
 class starring: Codable{
-        var name: String?
-        var playing: String?
+        var name: String
+        var playing: String
 }
 
 

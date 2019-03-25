@@ -14,7 +14,7 @@ class dataController {
     let jsonURL = "https://api.myjson.com/bins/1e5uji"
     var MDM = MovieDataModel()
     func getData (completion: @escaping (_ success:MovieDataModel) -> ()){
- 
+        
         //make the variable for the model to be put into
         
         //make the url a string
@@ -26,7 +26,6 @@ class dataController {
         let task = session.dataTask(with: jurl!) {(data,response, error) in
             
             if error != nil {
-                completion(self.MDM)
                 return
             }
             
@@ -35,15 +34,15 @@ class dataController {
                 return
             }
             
-                do{
+            do{
                 let decoder = JSONDecoder()
                 let mediaData = try decoder.decode(MovieDataModel.self, from: data)
                 self.MDM = mediaData
-                }catch{
-                        print("jeki5786")
-                    return
-                }
-                
+            }catch{
+                print(error)
+                return
+            }
+            
             
             DispatchQueue.main.async{
                 completion(self.MDM as! MovieDataModel)
@@ -51,6 +50,6 @@ class dataController {
         }
         task.resume()
     }
-   
+    
 }
 

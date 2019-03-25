@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-  
+        detailsetup()
         
     }
     
@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     
     // set up the main variables for the storyboard
     
-    @IBOutlet weak var moviePicImageView: UIImage!
+    @IBOutlet weak var moviePicImageView: UIImageView!
     @IBOutlet weak var TitleL: UILabel!
     @IBOutlet weak var YearL: UILabel!
     @IBOutlet weak var FormatL: UILabel!
@@ -39,7 +39,42 @@ class DetailViewController: UIViewController {
     
     var ShowDet: ShowEntries?
     
-    // now the image getting
+    // populating the details or the specIFIC MOVIEsnoktnb
+    func detailsetup() {
+        if let ShowDet = ShowDet {
+            self.navigationItem.title = ShowDet.name
+            TitleL.text = ShowDet.name
+            YearL.text = ShowDet.name
+            FormatL.text = ShowDet.format
+            if let epiNum = ShowDet.episodes{
+                EpiL.text = "\(epiNum)"
+            }
+            StudL.text = ShowDet.network
+            getItImage (url: URL(string: ShowDet.imageURL!)!) { (image, error) in
+                
+                if error != nil {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                 self.moviePicImageView.image = image
+                }
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    // now the image getting so the app doesnt mess up and things runn smoother
     
     func getItImage(url:URL, completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void){
         
