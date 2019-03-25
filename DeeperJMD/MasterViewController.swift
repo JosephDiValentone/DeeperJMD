@@ -14,6 +14,10 @@ class MasterViewController: UITableViewController {
     
     
 var detailViewController: DetailViewController? = nil
+    var MovieDM : MovieDataModel?{
+        didSet{tableView.reloadData()}
+    }
+var DataCon = dataController()
     
     override func viewDidLoad() {
 //        init(from:MOvieDM)
@@ -24,18 +28,7 @@ var detailViewController: DetailViewController? = nil
             _ = split.viewControllers
             print("view did load")
         }
-    }
-    
-    // call the files that I am going to put into the app
-    var MovieDM = MovieDataModel()
-    let DataCon = dataController()
-    
-    
-    
-    // using those files to grab the json data
-     func GetIt() {
-        
-        DataCon.getData {(data) in
+        DataCon.getData { (data) in
             //loading the data
             self.MovieDM = data
             DispatchQueue.main.async{
@@ -43,6 +36,9 @@ var detailViewController: DetailViewController? = nil
             }
         }
     }
+    
+   
+    
 
     
   
@@ -75,35 +71,35 @@ var detailViewController: DetailViewController? = nil
     
     // MARK: - Segues
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //brings up the detail of whatever show that was picked
-        if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow{
-                let controller = segue.destination as! DetailViewController
-                controller.ShowDet = MovieDM.franchises[indexPath.section].entries[indexPath.row]
-                
-            }
-           
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetail" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let object = MovieDM[Showfranchise.row] as! String
+//                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+//                controller.detailItem = object
+//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftItemsSupplementBackButton = true
+//            }
+//        }
+//    }
 
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return MovieDM.franchises.count// returns the number of franchises in the json
+        return ( MovieDM?.franchises.count ) ?? 0 // returns the number of franchises in the json
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return MovieDM.franchises[section].entries.count // return the number of franchise sections in the json
+        return MovieDM?.franchises[section].entries.count ?? 0 // return the number of franchise sections in the json
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?  {
-        return MovieDM.franchises[section].franchiseName // returns the name of the franchise for the title
+        return MovieDM?.franchises[section].franchiseName // returns the name of the franchise for the title
         
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = MovieDM.franchises[indexPath.section].entries[indexPath.row].name
+        cell.textLabel?.text = MovieDM?.franchises[indexPath.section].entries[indexPath.row].name
         //grab cells that have populated and populate them with the data
         return cell
     }

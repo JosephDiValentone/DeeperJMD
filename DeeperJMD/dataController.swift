@@ -10,36 +10,44 @@
 import UIKit
 
 class dataController {
-    func getData(completion: @escaping (_ success:MovieDataModel) -> ()){
-        // have the url thatis updating
-        let jsonURL = "https://api.myjson.com/bins/1e5uji"
+    // have the url thatis updating
+    let jsonURL = "https://api.myjson.com/bins/1e5uji"
+    var MDM = MovieDataModel()
+    func getData (completion: @escaping (_ success:MovieDataModel) -> ()){
+ 
         //make the variable for the model to be put into
-        var MDM = MovieDataModel()
+        
         //make the url a string
-        let url = URL(string: jsonURL)
+        let jurl = URL(string: jsonURL)
         // make the session
         let session = URLSession.shared
         // stil off formatting to me but I guess its what works
         //start the task of grabbing with the session
-        let task = session.dataTask(with: url!) {(data,response, error) in
+        let task = session.dataTask(with: jurl!) {(data,response, error) in
             
             if error != nil {
-                completion(MDM)
+                completion(self.MDM)
                 return
             }
             
-            if let data = data {
+            guard let data = data else {
                 // call the decoder and run it through the model
-                let decoder = JSONDecoder()
+                return
+            }
+            
                 do{
-                    MDM = try decoder.decode(MovieDataModel.self, from: data)
+                let decoder = JSONDecoder()
+                let mediaData = try decoder.decode(MovieDataModel.self, from: data)
+                self.MDM = mediaData
                 }catch{
-                    completion(MDM)
+                        print("jeki5786")
                     return
                 }
                 
+            
+            DispatchQueue.main.async{
+                completion(self.MDM as! MovieDataModel)
             }
-         completion(MDM)
         }
         task.resume()
     }
