@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
         if let ShowDet = ShowDet {
             self.navigationItem.title = ShowDet.name
             TitleL.text = ShowDet.name
-            YearL.text = ShowDet.name
+            YearL.text = ShowDet.yearStart
             FormatL.text = ShowDet.format
             if let epiNum = ShowDet.episodes{
                 EpiL.text = "\(epiNum)"
